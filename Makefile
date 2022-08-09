@@ -662,8 +662,13 @@ ifneq (,$(findstring msvc,$(platform)))
    CFLAGS   += -MT
    CXXFLAGS += -MT
 endif
+ifeq ($(platform), emscripten)
+   CFLAGS   += -O3 -DNDEBUG
+   CXXFLAGS += -O3 -DNDEBUG
+else
    CFLAGS   += -O2 -DNDEBUG
    CXXFLAGS += -O2 -DNDEBUG
+endif
 endif
 
 LDFLAGS += $(fpic) $(SHARED)
