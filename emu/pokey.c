@@ -544,7 +544,7 @@ void POKEYStateRead(void)
 		POKEY_PutByte((UWORD) (OFFSET_AUDF1 + i * 2), AUDF[i]);
 		POKEY_PutByte((UWORD) (OFFSET_AUDC1 + i * 2), AUDC[i]);
 	}
-	POKEY_PutByte(AUDCTL, AUDCTL[0]);
+	POKEY_PutByte(OFFSET_AUDCTL, AUDCTL[0]);
 
 	ReadINT(&DivNIRQ[0], 4);
 	ReadINT(&DivNMax[0], 4);
