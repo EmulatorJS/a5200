@@ -251,7 +251,7 @@ static void init_vol_only(void)
 }
 
 //int POKEYSND_DoInit(void)
-Pokey_sound_init(uint32_t freq17, UWORD playback_freq, UBYTE num_pokeys, unsigned int flags)
+int Pokey_sound_init(uint32_t freq17, UWORD playback_freq, UBYTE num_pokeys, unsigned int flags)
 {
 	//SndSave_CloseSoundFile();
 
