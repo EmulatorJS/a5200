@@ -314,7 +314,7 @@ void POKEY_PutByte(UWORD addr, UBYTE byte)
 		DivNIRQ[CHAN1] = DivNMax[CHAN1];
 		DivNIRQ[CHAN2] = DivNMax[CHAN2];
 		DivNIRQ[CHAN4] = DivNMax[CHAN4];
-		POKEYSND_Update(_STIMER, byte, 0, SOUND_GAIN);
+		POKEYSND_Update(OFFSET_STIMER, byte, 0, SOUND_GAIN);
 		break;
 	case OFFSET_SKCTL:
 		SKCTLS = byte;
